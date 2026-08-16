@@ -311,10 +311,19 @@ def main():
     if unknown:
         return ap.error(f"unknown style(s): {', '.join(unknown)}. "
                         f"Available: {', '.join(available)}")
+    failed = []
     for stem in picked:
-        print_style(measure_style(stem, available[stem], args.reps, args.limit,
-                                  args.workers, args.refresh))
-    return 0
+        # One style dying (CLI timeout, transport error) must not throw away the
+        # hour the other eighteen just spent. Their answers are cached anyway.
+        try:
+            print_style(measure_style(stem, available[stem], args.reps, args.limit,
+                                      args.workers, args.refresh))
+        except Exception as exc:
+            failed.append(stem)
+            print(f"[{stem}] FAILED: {type(exc).__name__}: {exc}", file=sys.stderr)
+    if failed:
+        print(f"\nfailed styles ({len(failed)}): {', '.join(failed)}", file=sys.stderr)
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

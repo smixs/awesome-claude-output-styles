@@ -31,6 +31,7 @@ usage() {
   echo "Styles: ${STYLES[*]} style-maker style-command"
   echo "--enforce: install a per-turn reminder hook so the style never fades"
   echo "style-command: install /style, a picker for switching styles"
+  echo "--body <style>: print the style body to stdout, for other agents"
 }
 
 fetch() { # fetch <remote-path> <local-path>
@@ -52,6 +53,16 @@ install_style_maker() {
   mkdir -p "$CLAUDE_DIR/skills/style-maker"
   fetch "skills/style-maker/SKILL.md" "$CLAUDE_DIR/skills/style-maker/SKILL.md"
   echo "installed: skills/style-maker (run it by asking Claude to \"make my output style\")"
+}
+
+# Print a style body (the file minus its YAML frontmatter) to stdout, for agents
+# that read plain instruction files instead of Claude Code output styles.
+print_body() { # print_body <name>
+  local tmp
+  tmp="$(mktemp)"
+  fetch "output-styles/$1.md" "$tmp"
+  awk 'body {print} /^---$/ {n++; if (n == 2) body = 1}' "$tmp"
+  rm -f "$tmp"
 }
 
 install_slash_command() {
@@ -132,6 +143,11 @@ set -- ${args[@]+"${args[@]}"}
 case "$1" in
   --list)
     printf '%s\n' "${STYLES[@]}" style-maker style-command
+    exit 0
+    ;;
+  --body)
+    [ $# -eq 2 ] || { echo "Usage: install.sh --body <style>"; exit 1; }
+    print_body "$2"
     exit 0
     ;;
   --all)
