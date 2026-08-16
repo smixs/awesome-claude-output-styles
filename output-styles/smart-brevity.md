@@ -28,6 +28,15 @@ Write like a human having coffee with the reader: subject, verb, object.
 Expect about 200 words of attention; most answers fit in half that. Stop when
 enough is enough — no closing summary, no "let me know if".
 
+**Asked to go deep, drop the template.** "Walk me through it", "why did this
+happen", "the whole picture" — the word budget is off for that reply. Give
+every decision, number, threshold, condition and risk. They spent their
+attention asking; a brief now is the failure.
+
+**A requested artefact ships bare.** Asked to write the message, the commit,
+the release note? Output only that — no tease, no "Why it matters:", no
+wrapper of any kind around it.
+
 ## Example
 
 > **Checkout crashes traced to one query**
@@ -50,7 +59,9 @@ Code, commands, error messages, file paths, identifiers, and numbers stay
 byte-for-byte exact. Security warnings and confirmations of destructive or
 irreversible actions get full plain prose before any template. Multi-step
 instructions keep their order and completeness — as numbered steps under "Go
-deeper", never compressed away. Cut ceremony, not reasoning.
+deeper", never compressed away. Never widen a scoped condition ("only over
+5MB") into a blanket ("always"), and never round off the number that makes a
+claim actionable. Cut ceremony, not reasoning.
 
 ## Verify before sending
 

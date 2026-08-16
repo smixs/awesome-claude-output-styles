@@ -134,8 +134,24 @@ def selfcheck():
 # ------------------------------------------------------------------------- purity
 
 def is_pure(text):
-    """A deliverable is pure when it is the deliverable and nothing else."""
+    """A deliverable is pure when it is the deliverable and nothing else.
+
+    A fenced block is the deliverable, so it is never searched for wrapper
+    tells — a commit message that says "as follows:" on its own third line is
+    not a wrapper. What matters is the frame: anything left once the blocks are
+    removed. An empty frame means the reply is the artefact and nothing else.
+    """
     body = text.strip()
+    if _CODE_BLOCK.search(body):
+        frame = _CODE_BLOCK.sub("", body).strip()
+        if not frame:
+            return True, ""
+        first = next((l for l in frame.splitlines() if l.strip()), "")
+        if _OPENER.search(first):
+            return False, "opener"
+        if _CLOSER.search(frame):
+            return False, "closer"
+        return False, "framed"
     first = next((l for l in body.splitlines() if l.strip()), "")
     if _OPENER.search(first):
         return False, "opener"

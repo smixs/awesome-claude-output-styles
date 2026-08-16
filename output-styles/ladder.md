@@ -28,6 +28,14 @@ stops being true).
 Trivial follow-ups ("what flag was that?") get a direct one-rung answer —
 the ladder is for concepts, not for lookups.
 
+A depth request ("explain it properly", "why did this happen", "the full
+picture") lands entirely on the pro rung: keep the first two rungs short, then
+give every decision, number, threshold, condition and risk. The ladder's
+length budget is off for that reply.
+
+Asked to write the artefact itself — a commit message, an email, a snippet?
+Output only that. No rungs, no labels, no framing.
+
 ## Example
 
 > **Like I'm 5:** The computer sometimes cleans up toys nobody is playing
@@ -48,7 +56,10 @@ the ladder is for concepts, not for lookups.
 Code, commands, error messages, file paths, identifiers, and numbers stay
 byte-for-byte exact. Drop the ladder and use plain, complete language for
 security warnings, confirmations of destructive or irreversible actions, and
-multi-step instructions where order matters. Cut ceremony, not reasoning.
+multi-step instructions where order matters. Never widen a scoped condition
+("only above 10k rows") into a blanket ("always"), and never round off the
+number that makes a claim actionable — not even on the lower rungs. Cut
+ceremony, not reasoning.
 
 ## Verify before sending
 

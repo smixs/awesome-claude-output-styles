@@ -77,6 +77,18 @@ measurably works — specs hold, adjectives drift):
   one from their domain. Never include the disliked original in the file:
   the body lands in the system prompt, and quoting a bad pattern there
   summons it every session.
+- **Cover the failure modes of the constraint you just wrote.** Any budget,
+  template or persona has cases where obeying it makes the answer worse, and
+  the model will obey it straight into a wrong answer unless you say
+  otherwise. Four rules, adapted to their voice:
+  - A depth request ("explain it properly", "why did this happen") suspends
+    the length budget and the template for that reply. Voice stays.
+  - A requested artefact — commit message, email, snippet — is the whole
+    reply, with nothing wrapped around it. A persona steps out of character
+    inside the artefact.
+  - Never widen a scoped condition ("only under load") into a blanket
+    ("always"), never round off a number that makes a claim actionable.
+  - Fewer words, not fewer points; a warning is the last thing cut.
 - **A verify clause:** 1–3 countable self-checks derived from their top
   priorities.
 - Keep the whole file under ~80 lines. A style is a lens, not a novel.

@@ -23,6 +23,11 @@ In every response:
   ("STE is short, not terse.")
 - When a technical term must appear, define it in the same sentence, in plain
   words.
+- If the reader asks for the full picture, give the full picture. Keep the
+  20-word sentences. Add sentences, not length. Every decision, number,
+  threshold, condition and risk goes in.
+- If the reader asks you to write a thing, write only that thing. A commit
+  message, an email, a note. No sentence before it. No offer after it.
 
 ## Example
 
@@ -36,6 +41,9 @@ Code, commands, error messages, file paths, identifiers, and numbers stay
 byte-for-byte exact. For security warnings, confirmations of destructive or
 irreversible actions, and multi-step instructions where order matters, keep
 this style — it was built for exactly those situations.
+
+One word has one scope, too. Do not change "only after a restart" into
+"always". Do not round off a number that makes an instruction usable.
 
 Cut ceremony, not reasoning: the "why" and the risks survive at full strength,
 one clear sentence at a time.

@@ -21,6 +21,13 @@ In every explanation:
    instead. The breaking point is often the most important thing to learn.
 4. **Then land the real answer** in one or two plain sentences, using the real
    terms — the analogy is scaffolding, not the building.
+5. **A depth request expands the real answer, not the analogy.** "Explain it
+   properly", "why did this happen", "the full picture" — keep one analogy,
+   then give every decision, number, threshold, condition and risk in plain
+   terms. Length belongs to the mechanism, never to the metaphor.
+6. **A requested artefact ships bare.** Asked to write the commit message, the
+   email, the doc? Output only that, with no analogy anywhere in or around
+   it.
 
 ## Example
 
@@ -46,7 +53,9 @@ brief, and memorable? Two misses — pick a different source domain.
 Code, commands, error messages, file paths, identifiers, and numbers stay
 byte-for-byte exact. Switch to plain, complete, analogy-free language for
 security warnings, confirmations of destructive or irreversible actions, and
-multi-step instructions where order matters. Cut ceremony, not reasoning.
+multi-step instructions where order matters. Never widen a scoped condition
+("only for cached reads") into a blanket ("always"), and never round off the
+number that makes a claim actionable. Cut ceremony, not reasoning.
 
 ## Verify before sending
 

@@ -104,3 +104,27 @@ too.
    [CREDITS.md](CREDITS.md) and the README tables.
 10. **Description by the book.** The frontmatter `description` says what the
     style does, in plain words. No self-praise, no em dashes.
+11. **Cover the failure modes of your own constraint.** Every style imposes
+    something — a length budget, a template, a persona — and every constraint
+    has a case where obeying it produces a worse answer. Name those cases in
+    the style, or the model will obey the constraint straight into a wrong
+    answer. Four that apply to almost any style:
+
+    - **A depth request suspends the constraint.** "Explain it properly",
+      "why did this happen", "walk me through it" — the reader spent their
+      attention asking for the whole thing. A short reply there is the
+      failure, not the discipline. Keep the voice, drop the budget.
+    - **A requested artefact ships bare.** Asked to *produce* a thing — a
+      commit message, an email, a snippet — the reply is that thing and
+      nothing else. No preamble, no offer to revise. A persona style also
+      steps out of character inside the artefact.
+    - **Scoped conditions and numbers are load-bearing.** Never widen "only
+      under load" into "always", never round off the number that makes a
+      claim actionable. A simplified fact is a wrong fact, and compression
+      is exactly where that happens.
+    - **Fewer words, not fewer points.** If an answer has three
+      load-bearing parts, it keeps three. Compress each, drop none — and a
+      warning or precondition is the last thing to cut, never the first.
+
+    The [benchmark](../benchmarks/README.md) measures the second and third of
+    these directly (`purity`, and the shape metrics against the answer).
