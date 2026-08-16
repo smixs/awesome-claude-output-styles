@@ -5,6 +5,13 @@ history so the numbering has a spine.
 
 ## 0.3.0 — 2026-08-16
 
+- **Every style now covers the failure modes of its own constraint.** A depth
+  request suspends the length budget and the template; a requested artefact
+  ships bare, with the persona stepping out of character inside it; scoped
+  conditions and numbers are never widened or rounded off. Written in each
+  style's own voice, and now convention 11 in the
+  [format guide](docs/format-guide.md). Measured: unstyled Opus 5 returns 1 of
+  8 deliverables without a wrapper, the styles 5–8 of 8.
 - **Benchmark harness.** Four deterministic measurements per style, no LLM judge:
   work-equivalence on 12 tasks with hidden tests, size, text shape, deliverable
   purity. Both arms generate through the `claude` CLI with settings, `CLAUDE.md`,

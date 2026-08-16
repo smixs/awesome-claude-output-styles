@@ -295,6 +295,12 @@ Every style in this hub follows the same conventions
   destructive-action confirmations, and order-critical instructions.
 - **Cut ceremony, not reasoning.** Styles shrink the wrapper, never the
   "why".
+- **Every constraint names its own failure modes.** A depth request
+  ("explain it properly", "why did this happen") suspends the length budget
+  and the template. A requested artefact — commit message, email, snippet —
+  is the whole reply, with the persona stepping out of character inside it.
+  Scoped conditions and numbers are never widened or rounded off: a
+  simplified fact is a wrong fact.
 - `keep-coding-instructions: true` everywhere — the engineering stays intact.
 
 ## The wider catalog
