@@ -28,8 +28,9 @@ STYLES=(
 
 usage() {
   echo "Usage: install.sh <style> [<style>...] [--enforce] | --all [--enforce] | --list"
-  echo "Styles: ${STYLES[*]} style-maker"
+  echo "Styles: ${STYLES[*]} style-maker style-command"
   echo "--enforce: install a per-turn reminder hook so the style never fades"
+  echo "style-command: install /style, a picker for switching styles"
 }
 
 fetch() { # fetch <remote-path> <local-path>
@@ -51,6 +52,12 @@ install_style_maker() {
   mkdir -p "$CLAUDE_DIR/skills/style-maker"
   fetch "skills/style-maker/SKILL.md" "$CLAUDE_DIR/skills/style-maker/SKILL.md"
   echo "installed: skills/style-maker (run it by asking Claude to \"make my output style\")"
+}
+
+install_slash_command() {
+  mkdir -p "$CLAUDE_DIR/commands"
+  fetch "commands/style.md" "$CLAUDE_DIR/commands/style.md"
+  echo "installed: commands/style.md (switch styles with /style)"
 }
 
 install_enforce_hook() {
@@ -124,15 +131,16 @@ set -- ${args[@]+"${args[@]}"}
 
 case "$1" in
   --list)
-    printf '%s\n' "${STYLES[@]}" style-maker
+    printf '%s\n' "${STYLES[@]}" style-maker style-command
     exit 0
     ;;
   --all)
     for s in "${STYLES[@]}"; do install_style "$s"; done
     install_style_maker
+    install_slash_command
     [ "$ENFORCE" = 1 ] && install_enforce_hook
     echo
-    echo "All styles installed. Pick one: /config -> Output style (takes effect after restart or /clear)."
+    echo "All styles installed. Pick one with /style, or /config -> Output style (takes effect after restart or /clear)."
     exit 0
     ;;
   -h|--help)
@@ -147,6 +155,10 @@ for s in "${requested[@]}"; do
     install_style_maker
     continue
   fi
+  if [ "$s" = "style-command" ]; then
+    install_slash_command
+    continue
+  fi
   found=0
   for known in "${STYLES[@]}"; do
     [ "$s" = "$known" ] && found=1 && break
@@ -158,7 +170,8 @@ done
 [ "$ENFORCE" = 1 ] && install_enforce_hook
 
 # Exactly one style requested -> make it the active style.
-if [ ${#requested[@]} -eq 1 ] && [ "${requested[0]}" != "style-maker" ]; then
+if [ ${#requested[@]} -eq 1 ] && [ "${requested[0]}" != "style-maker" ] \
+   && [ "${requested[0]}" != "style-command" ]; then
   activate "${requested[0]}"
 else
   echo
