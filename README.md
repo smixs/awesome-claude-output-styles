@@ -17,6 +17,8 @@
 <p align="center">
   <a href="https://github.com/smixs/awesome-claude-output-styles/stargazers"><img src="https://img.shields.io/github/stars/smixs/awesome-claude-output-styles?style=flat&color=yellow" alt="stars"></a>
   <a href="#the-styles"><img src="https://img.shields.io/badge/styles-19_across_4_tiers-orange?style=flat" alt="19 styles"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.3.0-6f42c1?style=flat" alt="version"></a>
+  <a href="benchmarks/"><img src="https://img.shields.io/badge/benchmarked-no_LLM_judge-2ea44f?style=flat" alt="benchmarked"></a>
   <a href="https://github.com/smixs/awesome-claude-output-styles/commits/main"><img src="https://img.shields.io/github/last-commit/smixs/awesome-claude-output-styles?style=flat" alt="last commit"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/smixs/awesome-claude-output-styles?style=flat" alt="license"></a>
 </p>
@@ -25,6 +27,7 @@
   <a href="#before--after">See it</a> ·
   <a href="#install">Install</a> ·
   <a href="#the-styles">The styles</a> ·
+  <a href="#does-it-actually-work">Measured</a> ·
   <a href="#make-your-own-style-maker">Make your own</a> ·
   <a href="#shared-design-rules">Design rules</a> ·
   <a href="#the-wider-catalog">Catalog</a>
@@ -178,6 +181,21 @@ Switching back: `/config` → **Output style** → `Default`.
 > The old `/output-style` command was removed in Claude Code v2.1.91 — most
 > guides online still mention it and are outdated. `/config` is the way.
 
+### Switching without `/config`: the `/style` command
+
+Nineteen styles do not fit a settings menu comfortably. `--all` installs the
+`/style` command; on its own:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/smixs/awesome-claude-output-styles/main/install.sh | bash -s -- style-command
+```
+
+`/style` opens a picker over every style you have installed, four at a time,
+with `Default` always one click away. `/style caveman` switches straight to
+one. User styles are written to `~/.claude/settings.json`, project styles to
+`.claude/settings.local.json`, so a personal preference never lands in a
+teammate's checkout.
+
 ### Make it stick: `--enforce`
 
 Claude Code reinforces its **built-in** styles every single turn — but never
@@ -192,6 +210,21 @@ curl -fsSL https://raw.githubusercontent.com/smixs/awesome-claude-output-styles/
 The hook is silent for built-in styles (no double reminders) and for
 `default`. Remove it anytime by deleting the entry from
 `~/.claude/settings.json` → `hooks.UserPromptSubmit`.
+
+### Other agents
+
+A style body is plain markdown; only the frontmatter is Claude Code's.
+`--body` prints the body without it, ready to paste into any agent's rules
+file:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/smixs/awesome-claude-output-styles/main/install.sh | bash -s -- --body caveman
+```
+
+Copy-paste commands for Codex, Cursor, Windsurf and `AGENTS.md` / `GEMINI.md`
+agents: [docs/other-agents.md](docs/other-agents.md). Nothing is added to the
+style files to make this work — no markers, no version stamps. Those bytes
+would compete with the instructions in every session.
 
 ## The styles
 
