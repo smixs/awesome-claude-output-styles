@@ -1,0 +1,20 @@
+{"id": "explain-01", "category": "explain", "question": "What is a database index and when does adding one make things worse?"}
+{"id": "explain-02", "category": "explain", "question": "Explain how JWT authentication works and where the tokens should be stored in a browser."}
+{"id": "explain-03", "category": "explain", "question": "What is the difference between a process and a thread?"}
+{"id": "explain-04", "category": "explain", "question": "How does garbage collection work in a modern JavaScript engine?"}
+{"id": "debug-01", "category": "debug", "question": "My Node process memory keeps climbing over days of uptime. How do I find what is holding the references?"}
+{"id": "debug-02", "category": "debug", "question": "A React list re-renders on every keystroke in an unrelated input. How do I track down why?"}
+{"id": "debug-03", "category": "debug", "question": "Our Postgres query got 40x slower after a deploy and the plan now shows a sequential scan. Where do I start?"}
+{"id": "debug-04", "category": "debug", "question": "Docker build works locally and fails in CI with a permission denied on a mounted volume. What is going on?"}
+{"id": "decide-01", "category": "decide", "question": "Should I use PostgreSQL or MongoDB for a new social app?"}
+{"id": "decide-02", "category": "decide", "question": "We have 200k lines of untyped Python. Is migrating to type hints worth it, and how would you sequence it?"}
+{"id": "decide-03", "category": "decide", "question": "Monorepo or separate repos for a team of eight shipping three services?"}
+{"id": "decide-04", "category": "decide", "question": "Our test suite takes 25 minutes. Do we parallelise it, cut tests, or move to a faster runner?"}
+{"id": "howto-01", "category": "howto", "question": "How do I safely add a NOT NULL column to a 50 million row Postgres table with no downtime?"}
+{"id": "howto-02", "category": "howto", "question": "How do I set up retries with exponential backoff and a circuit breaker for an unreliable payments API?"}
+{"id": "howto-03", "category": "howto", "question": "How do I rotate a leaked API key across a running fleet without dropping requests?"}
+{"id": "lookup-01", "category": "lookup", "question": "What is the difference between git rebase and git merge?"}
+{"id": "lookup-02", "category": "lookup", "question": "What does the CAP theorem actually say?"}
+{"id": "review-01", "category": "review", "question": "What are the main risks of storing session state in a single Redis instance with no persistence?"}
+{"id": "plan-01", "category": "plan", "question": "Three priorities this week, room for two. How do I decide what to cut?"}
+{"id": "plan-02", "category": "plan", "question": "I am onboarding onto a five year old codebase with no docs. What do I do in the first week?"}
