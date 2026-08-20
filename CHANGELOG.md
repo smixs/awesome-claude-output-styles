@@ -3,6 +3,39 @@
 Versions before 0.3.0 were never tagged; they are reconstructed from the git
 history so the numbering has a spine.
 
+## 0.4.0 — 2026-08-20
+
+- **`unslop`**, a twentieth style, and the third in the Terse tier to take on
+  slop. `no-slop` and `no-ai-slop` both work on voice; this one works on the
+  mechanical tells underneath it: em dashes and colons used as connectors,
+  curly quotes, title-case headings, bold labels that restate their own line,
+  passive voice, `utilize` and `leverage`, abstract metaphor nouns like
+  `substrate` and `vector`, and sentences that name a feeling where a mechanism
+  belongs. It also carries the half most slop removers skip: have an opinion,
+  vary the rhythm, let some mess in. Sterile writing is its own tell.
+- Adapted from the [unslop skill](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop)
+  in `cursor/plugins` `pstack` by Lauren Tan, MIT. Their taxonomy, their
+  self-audit question and much of their per-rule phrasing carry over,
+  restructured into the house skeleton the way `wait-what` was. `cursor/plugins`
+  licenses per plugin rather than at the repository root, so the notice to
+  preserve is `pstack/LICENSE`; it is now in [LICENSE](LICENSE) alongside the
+  other adapted sources, with the detail in
+  [docs/CREDITS.md](docs/CREDITS.md).
+- Measured, one rep through the benchmark harness. The engineering is intact:
+  12/12 hidden tests pass on both arms. Deliverable purity goes from 1/8 clean
+  unstyled to 7/8, the best of the three slop styles. The cost is scannability
+  and length, and it is not small: answers run about 12% longer (569 to 640
+  words), anchors per 100 words fall from 3.5 to 1.1, and the distance to the
+  first anchor goes from 33 words to 172. That is rule 8 doing exactly what it
+  says, converting bold labels and inline-header lists into prose. Pick this
+  style for prose quality, not for skimming.
+- This is the one style whose body breaks a local habit on purpose. Every other
+  style file uses em dashes freely; a style that bans them and then uses them
+  teaches the model the rule is optional, so `unslop.md` contains none, and no
+  curly quotes either. Its guardrail block also carries a clause the others do
+  not need: the punctuation and quote rules never rewrite a string literal, an
+  error message, or quoted text.
+
 ## 0.3.0 — 2026-08-16
 
 - **Every style now covers the failure modes of its own constraint.** A depth

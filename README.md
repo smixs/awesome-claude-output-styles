@@ -17,7 +17,7 @@
 <p align="center">
   <a href="https://github.com/smixs/awesome-claude-output-styles/stargazers"><img src="https://img.shields.io/github/stars/smixs/awesome-claude-output-styles?style=flat&color=yellow" alt="stars"></a>
   <a href="#the-styles"><img src="https://img.shields.io/badge/styles-20_across_4_tiers-orange?style=flat" alt="20 styles"></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.3.0-6f42c1?style=flat" alt="version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.4.0-6f42c1?style=flat" alt="version"></a>
   <a href="benchmarks/"><img src="https://img.shields.io/badge/benchmarked-no_LLM_judge-2ea44f?style=flat" alt="benchmarked"></a>
   <a href="https://github.com/smixs/awesome-claude-output-styles/commits/main"><img src="https://img.shields.io/github/last-commit/smixs/awesome-claude-output-styles?style=flat" alt="last commit"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/smixs/awesome-claude-output-styles?style=flat" alt="license"></a>
