@@ -5,18 +5,18 @@
 <h1 align="center">awesome-claude-output-styles</h1>
 
 <p align="center">
-  <strong>same brain. nineteen mouths.</strong>
+  <strong>same brain. twenty mouths.</strong>
 </p>
 
 <p align="center">
-  Make Claude talk like a human. <strong>19 installable output styles</strong> for Claude Code,<br>
+  Make Claude talk like a human. <strong>20 installable output styles</strong> for Claude Code,<br>
   each distilled from a <strong>credited author's methodology</strong> — from Boeing-manual English<br>
   to the Minto Pyramid to bedtime stories. One curl to install and switch.
 </p>
 
 <p align="center">
   <a href="https://github.com/smixs/awesome-claude-output-styles/stargazers"><img src="https://img.shields.io/github/stars/smixs/awesome-claude-output-styles?style=flat&color=yellow" alt="stars"></a>
-  <a href="#the-styles"><img src="https://img.shields.io/badge/styles-19_across_4_tiers-orange?style=flat" alt="19 styles"></a>
+  <a href="#the-styles"><img src="https://img.shields.io/badge/styles-20_across_4_tiers-orange?style=flat" alt="20 styles"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.3.0-6f42c1?style=flat" alt="version"></a>
   <a href="benchmarks/"><img src="https://img.shields.io/badge/benchmarked-no_LLM_judge-2ea44f?style=flat" alt="benchmarked"></a>
   <a href="https://github.com/smixs/awesome-claude-output-styles/commits/main"><img src="https://img.shields.io/github/last-commit/smixs/awesome-claude-output-styles?style=flat" alt="last commit"></a>
@@ -68,7 +68,7 @@ Real, unedited Opus 5 voice, July 2026 threads:
 > creating a new object reference on each render cycle, which breaks React's
 > referential equality check, so you may want to consider memoization…
 
-The same answer, six voices:
+The same answer, seven voices:
 
 <table>
 <tr><th width="34%" align="left">Voice</th><th align="left">Same answer</th></tr>
@@ -118,6 +118,19 @@ The same answer, six voices:
 </td></tr>
 <tr><td valign="top">
 
+**`unslop`**<br><sub>after [Lauren Tan](https://github.com/cursor/plugins/tree/main/pstack)'s unslop skill (cursor/plugins) — surface tells out, an opinion in</sub>
+
+</td><td valign="top">
+
+> React compares props by identity, not by contents, so a fresh object literal
+> on every render is a new reference and any memoized child sees a changed prop.
+> Wrap it in `useMemo` with the values it depends on and the reference stays
+> stable. If it holds no render-dependent state at all, hoist it to module
+> scope so it is created once.
+
+</td></tr>
+<tr><td valign="top">
+
 **`adhd`**<br><sub>after [Ayoub Ghriss](https://github.com/ayghri/i-have-adhd)'s i-have-adhd, 17k★</sub>
 
 </td><td valign="top">
@@ -141,7 +154,7 @@ The same answer, six voices:
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  styles                          19              │
+│  styles                          20              │
 │  credited authors & standards    20+             │
 │  code touched by any persona     never           │
 │  jargon left unexplained         0, by spec      │
@@ -156,7 +169,7 @@ One style (installs **and** activates it):
 curl -fsSL https://raw.githubusercontent.com/smixs/awesome-claude-output-styles/main/install.sh | bash -s -- eli15
 ```
 
-Everything (installs all 19 + the style-maker skill; activate later via `/config`):
+Everything (installs all 20 + the style-maker skill; activate later via `/config`):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/smixs/awesome-claude-output-styles/main/install.sh | bash -s -- --all
@@ -183,7 +196,7 @@ Switching back: `/config` → **Output style** → `Default`.
 
 ### Switching without `/config`: the `/style` command
 
-Nineteen styles do not fit a settings menu comfortably. `--all` installs the
+Twenty styles do not fit a settings menu comfortably. `--all` installs the
 `/style` command; on its own:
 
 ```bash
@@ -256,6 +269,7 @@ would compete with the instructions in every session.
 | [`adhd`](output-styles/adhd.md) | Action first, numbered steps, lists ≤5, visible progress | [Ayoub Ghriss](https://github.com/ayghri/i-have-adhd) · Ramsay & Rostain (*The Adult ADHD Tool Kit*) |
 | [`no-slop`](output-styles/no-slop.md) | A plain, specific human voice — the anti-Claudism style | [Siqi Chen](https://github.com/blader/humanizer) ([@blader](https://x.com/blader)) · [Conor Bronsdon](https://github.com/conorbronsdon/avoid-ai-writing) ([@ConorBronsdon](https://x.com/ConorBronsdon)) · Joe Cotellese's generic-sentence test |
 | [`no-ai-slop`](output-styles/no-ai-slop.md) | Direct, opinionated, zero filler — slop removed at the source | **[Peter Yang](https://github.com/petergyang/no-ai-slop)** ([@petergyang](https://x.com/petergyang)) — his editing principles as Claude's default voice |
+| [`unslop`](output-styles/unslop.md) | Plain punctuation, concrete words, sentence-case headings, and an actual opinion | **[Lauren Tan](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop)** (cursor/plugins `pstack`) — their 31 named patterns, plus the add-soul half most slop removers skip |
 
 ### Fun — personas that still get it right
 
@@ -325,6 +339,9 @@ Original-author projects worth knowing, beyond what's adapted here:
   Yang ([@petergyang](https://x.com/petergyang)): 20+ slop patterns with a
   voice-preservation-first stance and a self-check eval the skill runs on its
   own output.
+- [cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop)
+  — Lauren Tan's `unslop` skill in the `pstack` plugin: 31 numbered patterns in
+  seven groups, with an "adding soul" half most slop removers skip.
 - [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) —
   Hardik Pandya ([@hvpandya](https://x.com/hvpandya)): 8 rules plus a
   50-point scoring rubric.

@@ -39,7 +39,7 @@ output style?". One option per style: label is its `name:`, description is its
 frontmatter `description:`, prefixed with `Project style.` when it came from the
 project directory, so the user can see which settings file is about to change.
 
-The popup holds four options, and this collection ships nineteen styles, so page
+The popup holds four options, and this collection ships twenty styles, so page
 them:
 
 - Order: the active style first, then the rest alphabetically by `name:`. Stable

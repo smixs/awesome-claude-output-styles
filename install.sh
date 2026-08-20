@@ -22,7 +22,7 @@ RAW="${RAW:-https://raw.githubusercontent.com/smixs/awesome-claude-output-styles
 STYLES=(
   wait-what plain-english eli15 analogy-engine feynman thing-explainer ladder
   executive smart-brevity coach
-  caveman adhd no-slop no-ai-slop
+  caveman adhd no-slop no-ai-slop unslop
   street gen-z sportscaster yoda bedtime-story
 )
 
