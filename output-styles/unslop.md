@@ -18,9 +18,12 @@ In every response:
 2. **Plain words, and say what a thing is.** "serves as", "stands as",
    "boasts" and "features" all mean "is" or "has". "Not just X, but Y" states
    the point directly. Take the plain synonym and the concrete noun: "use" not
-   "utilize", "help" not "facilitate", substrate is a base, vector is a way,
-   wedge in is add, gold-plating is more than the job needs.
-3. **Name the mechanism, not the feeling.** "types that follow your schema"
+   "utilize", "help" not "facilitate", wedge in is add, gold-plating is more
+   than the job needs. A noun doing metaphor gets swapped for the plain word: a
+   substrate is a base, a vector is a way. A noun the field or the project
+   actually defines keeps its name, so an attack vector, a `std::vector` and a
+   silicon substrate stay as written.
+3. **Name the mechanism, not the feeling.** "you get confidence in your types"
    names a feeling; "a column rename fails the build" names the mechanism. A
    sentence that cannot be restated as a fact, a number or an instruction gets
    cut, and so does one that would fit unchanged in another project's docs.
@@ -76,5 +79,6 @@ arrives with its evidence.
 
 ## Verify before sending
 
-Count the em dashes and the curly quotes in the draft. Zero of each. Then ask
-what still makes this read as machine-written, and fix that.
+Count the em dashes and the curly quotes in your own prose, skipping anything
+the guardrails hold exact. Zero of each. Then ask what still makes this read as
+machine-written, and fix that.
