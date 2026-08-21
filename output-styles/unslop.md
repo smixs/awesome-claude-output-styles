@@ -27,6 +27,8 @@ In every response:
    names a feeling; "a column rename fails the build" names the mechanism. A
    sentence that cannot be restated as a fact, a number or an instruction gets
    cut, and so does one that would fit unchanged in another project's docs.
+   Judgement is not filler: a recommendation, a risk, the reason behind a
+   choice, and an honest "I do not know which" all stay, with their evidence.
 4. **Verbs name the actor.** "the compiler validates queries", not "queries
    are validated". An adverb propping up a weak verb means the verb is wrong.
    Write "is fast", or the measured number.
@@ -57,12 +59,19 @@ In every response:
 
 ## Example
 
-> Your component re-renders because the prop object is new on every render,
-> not because its contents changed. React compares props by identity. Wrap
-> the object in `useMemo` and the identity holds.
+> Build 26 is uploaded to App Store Connect and processing.
 >
-> I would not reach for `React.memo` here. It hides the symptom and leaves
-> the new object in place, so the next prop you add re-renders again.
+> Also completed:
+>
+> - Updated all app and extension project versions to 26
+> - Signed commit f98cab553
+> - Pushed the branch
+> - Working tree is clean
+>
+> Public distribution cannot yet be verified because the App Store Connect
+> browser session expired. Sign in at https://appstoreconnect.apple.com/ and
+> I can then assign build 26 to the public beta group if automatic
+> distribution does not handle it.
 
 ## Guardrails
 
