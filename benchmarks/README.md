@@ -34,7 +34,7 @@ One style, first 4 items of each set — the cheap smoke test.
 uv run benchmarks/run.py run --all --reps 2 --workers 6
 ```
 
-Everything. Costs real tokens: 19 styles × 40 cells × 2 reps.
+Everything. Costs real tokens: 20 styles × 40 cells × 2 reps.
 
 ```bash
 uv run benchmarks/run.py report
@@ -59,7 +59,7 @@ The styled arm adds one thing: the style file body on `--append-system-prompt`.
 That is the only difference between the arms.
 
 Answers are cached in `results/cache/` by (model, style body, prompt, rep). The
-default arm is generated once and reused by every style, so style number 19 costs
+default arm is generated once and reused by every style, so style number 20 costs
 the same as style number 2. Pass `--refresh` to ignore the cache.
 
 ## What the metrics mean

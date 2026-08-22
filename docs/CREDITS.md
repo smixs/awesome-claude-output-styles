@@ -61,6 +61,16 @@ copyright notices per MIT.
   [no-ai-slop](https://github.com/petergyang/no-ai-slop) by Peter Yang
   ([@petergyang](https://x.com/petergyang)), MIT — 20+ slop patterns,
   voice-preservation-first editing, and the portability test are his.
+- **unslop** — adapted from the
+  [unslop skill](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop)
+  in [cursor/plugins](https://github.com/cursor/plugins) `pstack` by Lauren
+  Tan, MIT, Copyright (c) 2026 Lauren Tan. The 31-pattern taxonomy, the
+  self-audit question, the "adding soul" half, and much of the phrasing of the
+  individual rules are theirs. Adapted for the output-style format: retargeted
+  from editing a supplied document to writing every reply, compressed into ten
+  procedural rules, with the shared guardrails block and the failure-mode rules
+  added. Note `cursor/plugins` licenses per plugin rather than at the
+  repository root, so the notice to preserve is `pstack/LICENSE`.
 
 ## Fun
 
