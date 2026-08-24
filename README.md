@@ -350,6 +350,9 @@ Original-author projects worth knowing, beyond what's adapted here:
   rigorous pattern catalog (61 categories, severity tiers).
 - [nattergabriel/claude-code-output-styles](https://github.com/nattergabriel/claude-code-output-styles) —
   13 well-crafted styles (Socratic, Roast, Ship It…).
+- [rstacruz/skimmable](https://github.com/rstacruz/skimmable) — rstacruz:
+  an always-on Claude Code plugin (also a Pi extension) that formats every
+  reply as bold-led, scannable bullet points.
 - [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) —
   the canonical Claude Code index, with an Output Styles category.
 
