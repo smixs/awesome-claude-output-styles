@@ -350,6 +350,9 @@ Original-author projects worth knowing, beyond what's adapted here:
   rigorous pattern catalog (61 categories, severity tiers).
 - [nattergabriel/claude-code-output-styles](https://github.com/nattergabriel/claude-code-output-styles) —
   13 well-crafted styles (Socratic, Roast, Ship It…).
+- [matanyarosenberg/skim-reply-style](https://github.com/matanyarosenberg/skim-reply-style) —
+  answer-first replies in ASD-STE100 sentences, with three detail levels the reader
+  sets per message (L1, L2, L3) and an optional per-turn reminder.
 - [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) —
   the canonical Claude Code index, with an Output Styles category.
 
